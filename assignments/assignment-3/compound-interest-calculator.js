@@ -17,5 +17,6 @@ var principal = 10000;
 var annualRate = 0.07;
 var years = 5;
 var n = 4;
-var totalAmount = principal * (1 + annualRate/n)^(n * years);
+// var totalAmount = principal * (1 + annualRate/n)^(n * years);
+var totalAmount = principal * (1 + annualRate/n) ** (n * years);
 console.log(totalAmount);
