@@ -5,5 +5,5 @@
 // If fullName is "John Doe", then initial should be "JD".
 
 var fullName = "John Doe";
-var initial = fullName[0] + fullName[5];
+var initial = fullName[0].concat(fullName[5]);
 console.log(initial);

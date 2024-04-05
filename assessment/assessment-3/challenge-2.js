@@ -5,5 +5,5 @@
 // Then, reassign the transformed string to the same variable and print the new value.
 
 var javascript = "javascript";
-var newJavascript = javascript.replace("javascript", "JavasScript");
-console.log(newJavascript);
+javascript = javascript.slice(+ 10).concat("J", javascript.slice(+ 1, + 4)).concat("S",javascript.slice(+ 5));
+console.log(javascript);
