@@ -7,5 +7,5 @@
 // This means that whether your name starts with a lowercase or uppercase letter, it should still be removed from the alphabet string. Print the result. 
 
  var alphabet = "abcdefghijklmnopqrstuvwxyz";
- var alphabetWithoutMyNameFirstCharacter = alphabet[0].concat(alphabet.slice(+2));
+ var alphabetWithoutMyNameFirstCharacter = alphabet[0].concat(alphabet.slice(2));
  console.log(alphabetWithoutMyNameFirstCharacter);
