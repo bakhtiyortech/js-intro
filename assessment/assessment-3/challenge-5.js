@@ -16,5 +16,5 @@ var completeSentence = "The quick brown fox jumps over the lazy dog.";
 var randomChar = "o"; 
 randomChar = completeSentence.indexOf(randomChar);
 // console.log(randomChar);
-var missingRandomCharString = completeSentence.slice(0, + randomChar).concat(completeSentence.slice(+ 13));
+var missingRandomCharString = completeSentence.slice(0, randomChar).concat(completeSentence.slice(13));
 console.log(missingRandomCharString);
