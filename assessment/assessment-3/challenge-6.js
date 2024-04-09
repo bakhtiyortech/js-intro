@@ -11,6 +11,8 @@
 
 var randomString = "Hi, my name is John. I am 30 years old. I am from England.";
 var randomChar = "m";
-randomChar = randomString.replaceAll(randomChar, "");
-randomString = randomString.length - randomChar.length;
-console.log(randomString);
+var randomStringLength = randomString.length;
+var randomStringWithoutRandomChar = randomString.replaceAll(randomChar, "");
+
+var randomCharCount = randomStringLength - randomStringWithoutRandomChar.length;
+console.log(randomCharCount);
