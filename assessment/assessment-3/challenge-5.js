@@ -12,9 +12,14 @@
 // The aim is to extract and exclude the initial appearance of randomChar from completeSentence, 
 //forming a new string that lacks this specific character, and then assign this new string to missingRandomCharString.
 
+// 1
 var completeSentence = "The quick brown fox jumps over the lazy dog.";
 var randomChar = "o"; 
-randomChar = completeSentence.indexOf(randomChar);
-// console.log(randomChar);
-var missingRandomCharString = completeSentence.slice(0, randomChar).concat(completeSentence.slice(13));
-console.log(missingRandomCharString);
+var randomCharIdx = completeSentence.indexOf(randomChar);
+
+var missingRandomCharString1 = completeSentence.slice(0, randomCharIdx) + completeSentence.slice(randomCharIdx + 1);
+console.log(missingRandomCharString1);
+
+// 2 
+var missingRandomCharString2 = completeSentence.replace(randomChar, "");
+console.log(missingRandomCharString2);
