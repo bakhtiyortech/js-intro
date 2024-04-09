@@ -5,5 +5,13 @@
 // Then, reassign the transformed string to the same variable and print the new value.
 
 var javascript = "javascript";
-javascript = javascript.slice(10).concat("J", javascript.slice(1, 4)).concat("S",javascript.slice(5));
+// "j".toUpperCase() + "ava" + "s".toUpperCase() + "cript" => "JavaScript"
+
+var firstSIdx = javascript.indexOf("s");
+var part1 = javascript[0].toUpperCase();
+var part2 = javascript.slice(1, firstSIdx);
+var part3 = javascript[firstSIdx].toUpperCase();
+var part4 = javascript.slice(firstSIdx + 1);
+
+javascript = part1 + part2 + part3 + part4;
 console.log(javascript);
