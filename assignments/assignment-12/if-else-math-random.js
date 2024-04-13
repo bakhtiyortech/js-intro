@@ -1,14 +1,15 @@
 /* ----- 1 ----- */
 
 var randomNumber = Math.floor(Math.random() * 10) + 1;
-var userName = "Jennifer";
+var userName = "Alexandria";
+console.log(randomNumber);
 
 if (randomNumber >= 1 && randomNumber <= 3){
     console.log(userName.slice(0, 3));
 } else if (randomNumber >= 4 && randomNumber <= 7){
     console.log(userName.slice(0, 6));
-} else  {
-    console.log(userName);
+} else {
+    console.log(userName.slice(0, 8));
 }
 
 
