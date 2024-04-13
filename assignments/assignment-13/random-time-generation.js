@@ -12,7 +12,10 @@ if (hours >= 6 && hours < 12){
 } else if (hours >= 12 && hours < 17){
     console.log("Good afternoon!");
 } else {
-    console.log("Good evening!")
+    console.log("Good evening!");
+}
+if (hours === 24 && minutes === 0 && seconds === 0){
+    console.log("The new day starting!");
 }
 
 
