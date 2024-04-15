@@ -58,7 +58,8 @@ if (mainString.indexOf(targetString)){
     console.log(`${targetString} is not in ${mainString}`);
 }
 
-// --- Challenge 6 --- \\
+/* ----- Challenge-6 ----- */
+
 // -- .trim() - Removes spaces from both front and end of a string and returns string without spaces.
 // -- .trimEnd() - Removes spaces from at the end of a string and returns string without end space.
 // -- .trimStart() - Removes spaces from at the start of a string and returns string without start space.
