@@ -24,10 +24,9 @@ if (userPassword === typedPassword){
 
   /* ----- 3 ----- */
 
-  var userNameLength = 5;
-  var userName = "boss";
+  var userName = "boss!";
 
-  if (userName >=userNameLength){
+  if (userName.length >= 5){
     console.log("Username is valid.");
   } else {
     console.log("Username must be at least 5 characters long.");
