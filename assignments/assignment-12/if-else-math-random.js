@@ -1,22 +1,18 @@
 /* ----- 1 ----- */
 
 var randomNumber = Math.floor(Math.random() * 10) + 1;
-var userName = "Alexandria";
-console.log(randomNumber);
+var name;
 
 if (randomNumber >= 1 && randomNumber <= 3){
-    console.log(userName.slice(0, 3));
+    name = "Jon";
 } else if (randomNumber >= 4 && randomNumber <= 7){
-    console.log(userName.slice(0, 6));
+    name = "Shokir";
 } else {
-    console.log(userName.slice(0, 8));
+    name = "Jennifer";
 }
 
 
-/* ----- 2 ----- */
-
 var randomNumber2 = Math.floor(Math.random() * 4) + 1;
-var name = "Abbos";
 
 if (randomNumber2 === 1){
     console.log(`Dear ${name}, wishing you a day filled with happiness and a year filled with joy.`);
