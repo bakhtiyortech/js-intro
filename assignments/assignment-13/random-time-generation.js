@@ -1,4 +1,4 @@
-var randomSeconds = Math.floor(Math.random() * 86400 + 1);
+var randomSeconds = Math.floor(Math.random() * (86400 + 1));
 
 var hours = Math.floor(randomSeconds / 3600);
 // console.log(hours);
@@ -7,12 +7,26 @@ var minutes = Math.floor((randomSeconds - hoursInSeconds) / 60);
 var minutesInSeconds = minutes * 60;
 var seconds = randomSeconds - hoursInSeconds - minutesInSeconds;
 
-var time = `${hours}:${minutes}:${seconds}`;
+var formattedHours = `${hours}`;
+var formattedMinutes = `${minutes}`;
+var formattedSeconds = `${seconds}`;
+
+if (hours < 10) {
+    formattedHours = `0${hours}`;
+}
+if (minutes < 10) {
+    formattedMinutes = `0${minutes}`;
+}
+if (seconds < 10) {
+    formattedSeconds = `0${seconds}`;
+}
+
+var time = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;;
 // console.log(time);
 
-if (hours >= 6 && hours < 12){
+if (hours < 12){
     console.log(time + " " + "Good morning!");
-} else if (hours >= 12 && hours < 17){
+} else if (hours < 17){
     console.log(time + " " + "Good afternoon!");
 } else {
     console.log(time + " " + "Good evening!");
