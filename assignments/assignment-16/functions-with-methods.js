@@ -10,7 +10,6 @@ function sumStrings(stringInt1, stringInt2) {
         return (stringInt1, stringInt2);
     }
 }
-sumStrings("123", "456");
 
 /* ----- Challenge-2 ----- */
 
@@ -23,7 +22,6 @@ function sumDigits(stringInt) {
         return string;
     }
 }
-sumDigits("1234");
 
 /* ----- Challenge-3 ----- */
 
@@ -47,8 +45,11 @@ function multiplyHalves(stringInt) {
 
 function isOddStringInteger(stringInt) {
     var number = parseInt(stringInt);
-    console.log(number % 2 !== 0);
+    var result = number % 2 !== 0;
+    return result;
 }
+
+isOddStringInteger("123");
 
 /* ----- Challenge-6 ----- */
 
@@ -81,8 +82,10 @@ function extractDecimal(number) {
 
 /* ----- Challenge-9 ----- */
 
-function integerToString(integer) {
+function integerToString(number) {
 
+    var result = number + "";
+    return result;
 }
 
 
@@ -106,9 +109,46 @@ function convertToFahrenheit(number) {
 
 /* ----- Challenge-12 ----- */
 
+function addOrdinalSuffix(number) {
+
+    var numberToString = number.toString();
+    if (number % 10 === 1) {
+        return numberToString + "st"
+    } else if (number % 10 === 2) {
+        return numberToString + "nd";
+    } else if (number % 10 === 3) {
+        return numberToString + "rd";
+    } else {
+        return numberToString + "th";
+    }    
+}
+
 /* ----- Challenge-13 ----- */
 
+function addTimeSuffix(hour) {
+
+    var hourNumberToString = hour.toString();
+    if (hour >= 0 && hour < 12) {
+        return hourNumberToString + " AM";
+    } 
+    if (hour === 12) {
+        return hourNumberToString + " PM";
+    } 
+    if (hour > 12 && hour < 24) {
+        return hourNumberToString + " PM";
+    } 
+}
+
 /* ----- Challenge-14 ----- */
+
+function formatAsPhone(number) {
+
+    var numberToString = number.toString();
+    var first3Number = numberToString.slice(0, 3);
+    var second3Number = numberToString.slice(3, 6);
+    var last4Number = numberToString.slice(6);
+    return `(${first3Number}) ${second3Number}-${last4Number}`;
+}
 
 /* ----- Challenge-15 ----- */
 
