@@ -79,8 +79,8 @@ function longestString(str1, str2, str3) {
 function shortestString(str1, str2, str3) {
    
     var minLen = min(str1.length, str2.length, str3.length);
-    if (maxLen === str1.length) return str1;
-    if (maxLen === cleanStr2.length) return str2;
+    if (minLen === str1.length) return str1;
+    if (minLen === cleanStr2.length) return str2;
     return str3;
 }
 
