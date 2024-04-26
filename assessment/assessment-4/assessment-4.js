@@ -38,12 +38,12 @@ console.log(testNumberDivisible3Not5);
 /* ----- challenge-5 ----- */
 
 var divTest = Math.floor(Math.random() * 101) + 100;
-var divTestDivisible5Not3 = testNumber % 3 === 0 && testNumber % 5 !== 0;
-console.log(testNumberDivisible3Not5);
+var divTestDivisible5Not3 = divTest % 5 === 0 && divTest % 3 !== 0;
+console.log(divTestDivisible5Not3);
 
 /* ----- challenge-6 ----- */
 
 var creativeString = "Exploring the vast universe of code can lead to unexpected discoveries."
-var creativeStringRandomIdx = Math.floor(Math.random() * creativeString.length);
-var textAfterRandom = creativeString.slice(creativeStringRandomIdx);
-console.log(textAfterRandom);
+var stringRandomIdx = Math.floor(Math.random() * creativeString.length);
+var textAfterRandom = creativeString.slice(stringRandomIdx + 1);
+console.log("Text after index " + stringRandomIdx + ": " + textAfterRandom);
