@@ -15,9 +15,9 @@ console.log(convertToUpperCase);
 /* ----- challenge-2 ----- */
 
 var randomNumber = Math.floor((Math.random() * 1000) + 1);
-var oddNumber = randomNumber % 2 === 0;
+var oddNumber = randomNumber % 2 !== 0;
 console.log(oddNumber);
-var evenNumber = randomNumber % 2 !== 0;
+var evenNumber = randomNumber % 2 === 0;
 console.log(evenNumber);
 
 /* ----- challenge-3 ----- */
