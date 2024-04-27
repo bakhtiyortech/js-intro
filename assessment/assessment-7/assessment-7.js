@@ -55,15 +55,18 @@ function fewerZeroes(num1, num2) {
 
     var num1ToStr = num1.toString();
     var num2ToStr = num2.toString();
+    var num1IncludesZero = num1ToStr.includes("0");
+    var num2IncludesZero = num2ToStr.includes("0");
+    var countNum1Zeroes = num1ToStr.replaceAll("0", "");
+    var countNum2Zeroes = num2ToStr.replaceAll("0", "");
+    var countNum1Len = countNum1Zeroes.length;
+    var countNum2Len = countNum2Zeroes.length;
 
-    var countNum1Zeroes = num1ToStr.replaceAll("0", "").length;
-    var countNum2Zeroes = num2ToStr.replaceAll("0", "").length;
-
-    if (countNum1Zeroes > countNum2Zeroes) {
-        return countNum1Zeroes;
-    } else {
-        return countNum2Zeroes;
-    }
+    if (num1IncludesZero === false) return num1;
+    if (num2IncludesZero === false) return num2;
+    if (countNum1Len === countNum2Len && num1IncludesZero === true && num2IncludesZero === true) return num1;
+    if (countNum1Len > countNum2Len) return num1;
+    if (countNum1Len < countNum2Len) return num2;
 }
 
 /* ----- Challenge-5 ----- */
