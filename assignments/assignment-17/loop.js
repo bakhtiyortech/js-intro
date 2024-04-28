@@ -26,4 +26,17 @@ function factorial(num) {
     }
 }
 
+/* ----- Challenge-4 ----- */
+
+function sumUpToMax(num1, num2, num3) {
+    var sum = 0;
+    var maxNum = num1;
+    if (num2 > maxNum) maxNum = num2;
+    if (num3 > maxNum) maxNum = num3;
+    for (var i = 1; i < maxNum; i++) {
+        return sum += i;
+    }
+}
+
+
 
