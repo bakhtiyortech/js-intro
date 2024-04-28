@@ -25,3 +25,12 @@ function sumUpToBoth(num1, num2) {
     var totalSum = sum1 + sum2;
     return totalSum;
 }
+
+/* ----- Challenge-3 ----- */
+
+function sumOfSquares(n) {
+    var sum = 0;
+    for (var i = 1; i <= n; i++) {
+        return sum += Math.pow(i, 2);
+    }
+}
