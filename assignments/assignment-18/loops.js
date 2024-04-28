@@ -34,3 +34,17 @@ function sumOfSquares(n) {
         return sum += Math.pow(i, 2);
     }
 }
+
+/* ----- Challenge-4 ----- */
+
+function countPerfectSquares(num1, num2) {
+    var minNum = num1;
+    if (num2 < minNum) minNum = num2;
+    var maxNum = num1;
+    if (num2 > maxNum) maxNum = num2;
+    for (var i = minNum; i <= maxNum; i++) {
+        if (Math.sqrt(i) % 1 === 0) {
+            return i;
+        }
+    }
+}
