@@ -38,5 +38,19 @@ function sumUpToMax(num1, num2, num3) {
     }
 }
 
+/* ----- Challenge-5 ----- */
+
+function sumDivisibleByFour(num1, num2) {
+    var sum = 0;
+    var maxNum = num1;
+    if (num2 > maxNum) maxNum = num2;
+    var minNum = num1;
+    if (num2 < minNum) minNum = num2;
+    for (var i = minNum; i < maxNum; i++) {
+        if (i % 4 === 0) return sum += i;
+    }
+}
+
+
 
 
