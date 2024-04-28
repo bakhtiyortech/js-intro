@@ -16,3 +16,14 @@ function sumEvenNumbers(num) {
         if (i % 2 === 0) return sum += i;
     }
 }
+
+/* ----- Challenge-3 ----- */
+
+function factorial(num) {
+    var product = 1;
+    for (var i = num; i > 0; i--){
+        return product *= i;
+    }
+}
+
+
