@@ -36,6 +36,7 @@ function sumUpToMax(num1, num2, num3) {
     for (var i = 1; i < maxNum; i++) {
         return sum += i;
     }
+    if (maxNum < 0) return 0;
 }
 
 /* ----- Challenge-5 ----- */
