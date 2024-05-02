@@ -1,26 +1,26 @@
 /* ----- Challenge-1 ----- */
 
 function countDivisibleByThreeOrFive(n) {
-
+        var sum = 0;
     for (var i = 1; i < n; i++) {
         if ((i % 3 === 0 || i % 5 ===0) && !(i % 3 === 0 && i % 5 ===0)) {
-            console.log(i);
+            sum += i;
         }
+        return sum;
     }
 }
-countDivisibleByThreeOrFive(30);
 
 /* ----- Challenge-2 ----- */
 
 function sumUpToBoth(num1, num2) {
     var sum1 = 0;
     for (var i = 1; i <= num1; i++) {
-        return sum1 += i;
+        sum1 += i;
     }
 
     var sum2 = 0;
     for (var i = 1; i <= num2; i++) {
-        return sum2 += i;
+        sum2 += i;
     }
 
     var totalSum = sum1 + sum2;
@@ -32,22 +32,21 @@ function sumUpToBoth(num1, num2) {
 function sumOfSquares(n) {
     var sum = 0;
     for (var i = 1; i <= n; i++) {
-        return sum += Math.pow(i, 2);
+         sum += Math.pow(i, 2);
     }
+    return sum;
 }
 
 /* ----- Challenge-4 ----- */
 
 function countPerfectSquares(num1, num2) {
-    var minNum = num1;
-    if (num2 < minNum) minNum = num2;
-    var maxNum = num1;
-    if (num2 > maxNum) maxNum = num2;
-    for (var i = minNum; i <= maxNum; i++) {
+
+    for (var i = num1; i < num2; i++) {
         if (Math.sqrt(i) % 1 === 0) {
-            return i;
+            i++;
         }
     }
+    return i;
 }
 
 /* ----- Challenge-5 ----- */
@@ -56,8 +55,9 @@ function countDigitsSumDivisibleByThree(num1, num2) {
     var sum = 0;
     for (var i = num1; i <= num2; i++) {
         if (i % 3 === 0) {
-            return sum += 1;
+             sum += 1;
         }
     }
+    return sum;
 }
 
