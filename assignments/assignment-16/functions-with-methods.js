@@ -3,12 +3,7 @@
 function sumStrings(stringInt1, stringInt2) {
 
     var sums = parseInt(stringInt1) + parseInt(stringInt2);
-
-    if (typeof stringInt1 === "string" && typeof stringInt2 === "string") {
-        return sums;
-    } else {
-        return (stringInt1, stringInt2);
-    }
+    return sums;
 }
 
 /* ----- Challenge-2 ----- */
@@ -16,11 +11,7 @@ function sumStrings(stringInt1, stringInt2) {
 function sumDigits(stringInt) {
 
     var sums = parseInt(stringInt[0]) + parseInt(stringInt[1]) + parseInt(stringInt[2]) + parseInt(stringInt[3]);
-    if (stringInt.length === 4) {
-        return sums;
-    } else {
-        return string;
-    }
+    return sums;
 }
 
 /* ----- Challenge-3 ----- */
@@ -35,10 +26,19 @@ function multiplyRandomPositions(stringInt) {
 /* ----- Challenge-4 ----- */
 
 function multiplyHalves(stringInt) {
-    var firstHalf = stringInt.slice(0, Math.floor(stringInt.length / 2));
-    var secondHalf = stringInt.slice(Math.floor(stringInt.length / 2));
-    var result = parseInt(firstHalf) * parseInt(secondHalf);
+    var strLen = stringInt.length;
+    if(strLen % 2 !== 0) {
+        var firstPart = stringInt.slice(0, Math.floor(stringInt.length / 2));
+        var midlePart = stringInt.slice(0, Math.ceil(stringInt.length / 2) - 1);
+        var secondPart = stringInt.slice(midlePart.length + 1);
+        var result = parseInt(firstPart) * parseInt(secondPart);
+        return result;
+    } else {
+    var firstPart = stringInt.slice(0, Math.floor(stringInt.length / 2));
+    var secondPart = stringInt.slice(Math.floor(stringInt.length / 2));
+    var result = parseInt(firstPart) * parseInt(secondPart);
     return result;
+    }
 }
 
 /* ----- Challenge-5 ----- */
@@ -48,8 +48,6 @@ function isOddStringInteger(stringInt) {
     var result = number % 2 !== 0;
     return result;
 }
-
-isOddStringInteger("123");
 
 /* ----- Challenge-6 ----- */
 
