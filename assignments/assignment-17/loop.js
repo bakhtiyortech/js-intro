@@ -1,20 +1,22 @@
 /* ----- Challenge-1 ----- */
 
 function sumExclusiveRange(minNum, maxNum) {
-    var sum = 0;
-    for (var i = minNum; i < maxNum; i++) {
-        return sum += i;
-    }
     if (minNum > maxNum) return "Not valid range";
+    var sum = 0;
+    for (var i = minNum + 1; i < maxNum; i++) {
+         sum += i;
+    }
+    return sum;
 }
 
 /* ----- Challenge-2 ----- */
 
 function sumEvenNumbers(num) {
     var sum = 0;
-    for (var i = 0; i < num; i++) {
-        if (i % 2 === 0) return sum += i;
+    for (var i = 1; i < num; i++) {
+        if (i % 2 === 0)  sum += i;
     }
+    return sum;
 }
 
 /* ----- Challenge-3 ----- */
@@ -22,21 +24,23 @@ function sumEvenNumbers(num) {
 function factorial(num) {
     var product = 1;
     for (var i = num; i > 0; i--){
-        return product *= i;
+         product *= i;
     }
+    return product;
 }
 
 /* ----- Challenge-4 ----- */
 
 function sumUpToMax(num1, num2, num3) {
+    if (maxNum < 0) return 0;
     var sum = 0;
     var maxNum = num1;
     if (num2 > maxNum) maxNum = num2;
     if (num3 > maxNum) maxNum = num3;
     for (var i = 1; i < maxNum; i++) {
-        return sum += i;
+         sum += i;
     }
-    if (maxNum < 0) return 0;
+    return sum;
 }
 
 /* ----- Challenge-5 ----- */
@@ -48,8 +52,9 @@ function sumDivisibleByFour(num1, num2) {
     var minNum = num1;
     if (num2 < minNum) minNum = num2;
     for (var i = minNum; i < maxNum; i++) {
-        if (i % 4 === 0) return sum += i;
+        if (i % 4 === 0) sum += i;
     }
+    return sum;
 }
 
 
