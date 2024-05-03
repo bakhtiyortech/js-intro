@@ -13,7 +13,7 @@ function sumExclusiveRange(minNum, maxNum) {
 
 function sumEvenNumbers(num) {
     var sum = 0;
-    for (var i = 1; i < num; i++) {
+    for (var i = 1; i <= num; i++) {
         if (i % 2 === 0)  sum += i;
     }
     return sum;
@@ -37,7 +37,7 @@ function sumUpToMax(num1, num2, num3) {
     var maxNum = num1;
     if (num2 > maxNum) maxNum = num2;
     if (num3 > maxNum) maxNum = num3;
-    for (var i = 1; i < maxNum; i++) {
+    for (var i = 1; i <= maxNum; i++) {
          sum += i;
     }
     return sum;
@@ -51,7 +51,7 @@ function sumDivisibleByFour(num1, num2) {
     if (num2 > maxNum) maxNum = num2;
     var minNum = num1;
     if (num2 < minNum) minNum = num2;
-    for (var i = minNum; i < maxNum; i++) {
+    for (var i = minNum; i <= maxNum; i++) {
         if (i % 4 === 0) sum += i;
     }
     return sum;
