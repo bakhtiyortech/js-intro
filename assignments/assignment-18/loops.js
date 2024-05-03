@@ -41,12 +41,13 @@ function sumOfSquares(n) {
 
 function countPerfectSquares(num1, num2) {
 
-    for (var i = num1; i < num2; i++) {
+    var sum = 0;
+    for (var i = num1; i <= num2; i++) {
         if (Math.sqrt(i) % 1 === 0) {
-            i++;
+            sum++;
         }
     }
-    return i;
+    console.log(sum);
 }
 
 /* ----- Challenge-5 ----- */
@@ -54,10 +55,34 @@ function countPerfectSquares(num1, num2) {
 function countDigitsSumDivisibleByThree(num1, num2) {
     var sum = 0;
     for (var i = num1; i <= num2; i++) {
+        console.log(i);
         if (i % 3 === 0) {
-             sum += 1;
+             sum++;
         }
     }
     return sum;
 }
 
+/* ----- Challenge-6 ----- */
+
+function multiplyAllDigits(num1, num2) {
+    var numToStr1 = num1.toString();
+    var numToStr2 = num2.toString();
+    var product = 1;
+    for (var i = 0; i < numToStr1.length; i++) {
+        var digit = parseInt(numToStr1[i]);
+        console.log(digit);
+        if (digit !== 0) {
+            product *= digit;
+        }
+    }
+
+    for (var i = 0; i < numToStr2.length; i++) {
+        var digit = parseInt(numToStr2[i]);
+        if (digit !== 0) {
+            product *= digit;
+        }
+    }
+
+    return product;
+}
