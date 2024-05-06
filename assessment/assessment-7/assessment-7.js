@@ -2,23 +2,23 @@
 
 function countAE(str1, str2) {
 
-    var str1ToLowerCase = str1.toLowerCase();
-    var str2ToLowerCase = str2.toLowerCase(); 
+    var str1LenAfterRepA = str1.toLowerCase().replaceAll("a", "").length;
+    var str1LenAfterRepE = str1.toLowerCase().replaceAll("e", "").length;
+    var str2LenAfterRepA = str2.toLowerCase().replaceAll("a", "").length;
+    var str2LenAfterRepE = str2.toLowerCase().replaceAll("e", "").length;
+    var countStr1A = str1.length - str1LenAfterRepA;
+    var countStr1E = str1.length - str1LenAfterRepE;
+    var totalCountStr1AE = countStr1A + countStr1E;
+    var countStr2A = str2.length - str2LenAfterRepA;
+    var countStr2E = str2.length - str2LenAfterRepE;
+    var totalCountStr2AE = countStr2A + countStr2E;
 
-    var countStr1A = str1ToLowerCase.replaceAll("a", "").length;
-    var countStr1E = str1ToLowerCase.replaceAll("e", "").length;
-    var countStr2A = str2ToLowerCase.replaceAll("a", "").length;
-    var countStr2E = str2ToLowerCase.replaceAll("e", "").length;
-
-    var totalCountStr1 = countStr1A + countStr1E;
-    var totalCountStr2 = countStr2A + countStr2E;
-
-    if (totalCountStr1 === totalCountStr2) {
-        return `${str1}, ${str2}`;
-    } else if (totalCountStr1 > totalCountStr2) {
+    if (totalCountStr1AE > totalCountStr2AE) {
         return str1;
-    } else {
+    } else if (totalCountStr1AE < totalCountStr2AE) {
         return str2;
+    } else {
+        console.log(`${str1} ${str2}`);
     }
 }
 
